@@ -13,6 +13,7 @@ brew install yq
 brew install zoxide
 brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
+brew install font-hack-nerd-font
 
 # Next let's install the package needed for kubernetes
 brew install age
