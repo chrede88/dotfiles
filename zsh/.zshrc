@@ -27,7 +27,7 @@ export SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Setup zsh syntas highlighting (using catppuccin colors)
-source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+source ~/.config/zsh-highlight/catppuccin_mocha-zsh-highlighting.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Setup kubectl autocompletion
@@ -45,4 +45,4 @@ eval "$(zoxide init --cmd cd zsh)"
 # Alias commands
 alias k="kubectl"
 alias cat="bat --paging never --style plain"
-alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias ls="eza --color=always --git --no-filesize --icons=always --no-time --oneline"
