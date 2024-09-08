@@ -38,7 +38,7 @@ git config --global gpg.ssh.allowedsignersfile ~/.config/git/allowed_signers
 Now that we have install adn setup git, we can clone the dot files repo to our machine. It's imortant that it's cloned to the home folder `~/` for `stow` to work correctly.
 
 ```zsh
-git clone ...
+git clone git@github.com:chrede88/dotfiles.git
 ```
 
 Now we can install the rest of the packages needed. Execute the install.sh script to install the packages needed.
