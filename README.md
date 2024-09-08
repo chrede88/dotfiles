@@ -24,7 +24,7 @@ Next let's setup some general git config
 
 ```zsh
 git config --global user.name "Christian Olsen"
-git config --global user.email "9137189+chrede88@users.noreply.github.com"
+git config --global user.email <my-email>
 git config --global init.defaultbranch main
 git config --global core.editor "code --wait"
 git config --global user.signingkey ~/.ssh/github_ed25519.pub
