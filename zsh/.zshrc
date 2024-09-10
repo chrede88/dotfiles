@@ -42,7 +42,11 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 # Setup zoxide
 eval "$(zoxide init --cmd cd zsh)"
 
+# Setup fzf
+source <(fzf --zsh)
+
 # Alias commands
 alias k="kubectl"
-alias cat="bat --paging never --style plain"
+alias cat="bat --color=always --paging never --style='changes,numbers,grid,header'"
 alias ls="eza --color=always --git --no-filesize --icons=always --no-time --oneline"
+alias fp="fzf --preview 'bat --color=always --style='changes,numbers,grid,header' {}' | xargs code"

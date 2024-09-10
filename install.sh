@@ -7,6 +7,7 @@
 brew install kitty
 brew install bat
 brew install eza
+brew install fzf
 brew install jq
 brew install starship
 brew install yq
