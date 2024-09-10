@@ -1,6 +1,6 @@
 .DS_Store
 
 # micro stuff
-micro/.config/buffers
-micro/.config/backups
-micro/.config/bindings.json
+micro/.config/micro/buffers
+micro/.config/micro/backups
+micro/.config/micro/bindings.json
