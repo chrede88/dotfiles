@@ -45,6 +45,9 @@ eval "$(zoxide init --cmd cd zsh)"
 # Setup fzf
 source <(fzf --zsh)
 
+# Setup Micro
+export "MICRO_TRUECOLOR=1"
+
 # Alias commands
 alias k="kubectl"
 alias cat="bat --color=always --paging never --style='changes,numbers,grid,header'"
