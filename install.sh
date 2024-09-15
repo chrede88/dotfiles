@@ -29,9 +29,14 @@ brew install talosctl
 # Next let's install package needed for Hugo
 brew install go
 brew install hugo
+brew install node
 
-# Lastly some misc packages
+# misc packages
 brew install gh
 brew install pipx
 brew install pre-commit
 brew install stow
+brew install --cask visual-studio-code
+
+# conda
+brew install --cask miniconda

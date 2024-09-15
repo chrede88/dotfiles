@@ -1,0 +1,16 @@
+[user]
+	name = Christian Olsen
+	email = 9137189+Chrede88@users.noreply.github.com
+	signingkey = ~/.ssh/github_ed25519.pub
+[core]
+	editor = code --wait
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = ~/.config/git/allowed_signers
+[commit]
+	gpgsign = true
+[format]
+	signoff = true
+[init]
+	defaultbranch = main

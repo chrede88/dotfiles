@@ -20,18 +20,6 @@ First we need `git` in order to clone the repo, that contains the list of packag
 brew install git
 ```
 
-Next let's setup some general git config
-
-```zsh
-git config --global user.name "Christian Olsen"
-git config --global user.email <my-email>
-git config --global init.defaultbranch main
-git config --global core.editor "code --wait"
-git config --global user.signingkey ~/.ssh/github_ed25519.pub
-git config --global gpg.format ssh
-git config --global commit.gpgsign true
-git config --global gpg.ssh.allowedsignersfile ~/.config/git/allowed_signers
-```
 ---
 
 ### Install packages
@@ -75,4 +63,12 @@ Next verify that the Catppuccin theme is avaliable
 
 ```zsh
 bat --list-themes | grep Cat
+```
+---
+
+### Miniconda
+After installing miniconda we've to initialize conda:
+
+```zsh
+~/miniconda3/bin/conda init zsh
 ```
