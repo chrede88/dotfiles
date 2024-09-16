@@ -3,7 +3,7 @@
 	email = 9137189+Chrede88@users.noreply.github.com
 	signingkey = ~/.ssh/github_ed25519.pub
 [core]
-	editor = code --wait
+	editor = micro
 [gpg]
 	format = ssh
 [gpg "ssh"]

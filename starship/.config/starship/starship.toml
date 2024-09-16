@@ -18,7 +18,7 @@ symbol = ' '
 
 [kubernetes]
 disabled = false
-format = '[$symbol$context( \($namespace\))]($style) '
+format = '[$symbol$context]($style) '
 
 [python]
 pyenv_version_name = false
