@@ -23,10 +23,10 @@ brew install git
 ---
 
 ### Install packages
-Now that we have install adn setup git, we can clone the dot files repo to our machine. It's imortant that it's cloned to the home folder `~/` for `stow` to work correctly.
+Now that we have installed git, we can clone the dot files repo to our machine. As I'm still missing my `.gitconfig` file, I'll have to clone it using https. It's imortant that it's cloned to the home folder `~/` for `stow` to work correctly.
 
 ```zsh
-git clone git@github.com:chrede88/dotfiles.git
+git clone https://github.com/chrede88/dotfiles.git .dotfiles
 ```
 
 Now we can install the rest of the packages needed. Execute the install.sh script to install the packages needed.
