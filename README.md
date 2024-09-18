@@ -11,8 +11,13 @@ On a new machine I'll have to install some things before I can sync my dot files
 ```
 Make sure to add brew to the PATH buy following the quide at the end of the install process
 
----
-### Install git
+Xocde Tools should be downloaded as a part of the Homebrew install. This also includes git. Check if git is installed by executing the following:
+
+```zsh
+git -v
+```
+
+#### Install git
 
 First we need `git` in order to clone the repo, that contains the list of packages I need to install.
 
@@ -33,7 +38,7 @@ Now we can install the rest of the packages needed. Execute the install.sh scrip
 
 ```zsh
 chmod +x install.sh
-install.sh
+./install.sh
 ```
 
 ---

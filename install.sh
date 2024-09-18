@@ -1,3 +1,4 @@
+#!/bin/zsh
 # Fist install Homebrew
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # Make sure to add brew to the PATH buy following the quide at the end of the install process
