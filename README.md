@@ -46,6 +46,14 @@ chmod +x install.sh
 ### Stow
 We can now create symlinks to the dot files using `stow`.
 
+First let's test that everything will work out as expected by passed `-n` to stow.
+
+```zsh
+stow -v -n .
+```
+This will run a simulation and output the symlinks that will be created when running it for real. If everything looks good, we can execute the actual stow command: 
+
+
 ```zsh
 stow -v .
 ```

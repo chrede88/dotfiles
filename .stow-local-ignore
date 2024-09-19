@@ -1,4 +1,5 @@
-/.gitignore
+\.gitignore
+\.git
 /install.sh
-/.git
 /README.md
+/.DS_Store
