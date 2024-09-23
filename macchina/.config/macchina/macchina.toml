@@ -47,4 +47,4 @@ theme = "hydrogen"
 #   - GPU
 #   - DiskSpace
 # Example:
-show = ["OperatingSystem", "Terminal", "Shell", "Uptime", "Packages", "ProcessorLoad", "Battery"]
+show = ["OperatingSystem", "Kernel", "Terminal", "Shell", "Uptime", "Packages", "ProcessorLoad", "Battery"]

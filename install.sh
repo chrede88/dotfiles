@@ -1,23 +1,55 @@
 #!/bin/zsh
-# Fist install Homebrew
+
+echo "Setting up Mac ..."
+
+# create .config folder
+mkdir -p "$HOME/.config"
+
+echo "Installing Homebrew ..."
+# Install Homebrew
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # Make sure to add brew to the PATH buy following the quide at the end of the install process
+if test ! $(which brew); then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+# Update brew
+brew update
+brew analytics off
+
+echo "Installing brew Taps ..."
+brew tap FelixKratz/formulae
+
+echo "Installing brew casks ..."
+brew install --cask font-hack-nerd-font
+brew install --cask sf-symbols
+brew install --cask kitty
+brew install --cask visual-studio-code
+brew install --cask miniconda
+
+echo "Installing brew packages ..."
 # We can now install the package I need
 # First let's get the package needed for my terminal setup
-brew install kitty
 brew install bat
 brew install eza
 brew install fzf
-brew install jq
 brew install starship
-brew install yq
 brew install zoxide
+brew install jq
+brew install yq
 brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
-brew install font-hack-nerd-font
 brew install macchina
 brew install yazi
+brew install gh
+brew install stow
+brew install git
+brew install pipx
+brew install pre-commit
+brew install sketchybar
 
 # Next let's install the package needed for kubernetes
 brew install age
@@ -34,12 +66,10 @@ brew install go
 brew install hugo
 brew install node
 
-# misc packages
-brew install gh
-brew install pipx
-brew install pre-commit
-brew install stow
-brew install --cask visual-studio-code
+# Setup stuff for sketchybar
+echo "Installing extra stuff for Sketchybar ..."
+curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.24/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf
 
-# conda
-brew install --cask miniconda
+
+# Start brew services
+brew services start sketchybar

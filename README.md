@@ -11,20 +11,7 @@ On a new machine I'll have to install some things before I can sync my dot files
 ```
 Make sure to add brew to the PATH buy following the quide at the end of the install process
 
-Xocde Tools should be downloaded as a part of the Homebrew install. This also includes git. Check if git is installed by executing the following:
-
-```zsh
-git -v
-```
-
-#### Install git
-
-First we need `git` in order to clone the repo, that contains the list of packages I need to install.
-
-```zsh
-brew install git
-```
-
+Xocde Tools should be downloaded as a part of the Homebrew install. git will be installed along with the Xcode Tools, we can use this for cloning the repo. The Homebrew version will be installed later.
 ---
 
 ### Install packages
@@ -49,13 +36,13 @@ We can now create symlinks to the dot files using `stow`.
 First let's test that everything will work out as expected by passed `-n` to stow.
 
 ```zsh
-stow -v -n .
+stow -vRn .
 ```
 This will run a simulation and output the symlinks that will be created when running it for real. If everything looks good, we can execute the actual stow command: 
 
 
 ```zsh
-stow -v .
+stow -vR .
 ```
 
 The output should print the created symlinks.
