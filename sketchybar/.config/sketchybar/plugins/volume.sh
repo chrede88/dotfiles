@@ -1,9 +1,7 @@
 #!/bin/bash
 
-source "$HOME/.config/sketchybar/icons.sh"
-source "$HOME/.config/sketchybar/colors.sh"
-
-if [ "$SENDER" = "volume_change" ]; then
+volume_change() {
+  source "$HOME/.config/sketchybar/icons.sh"
   VOLUME=$INFO
 
   case $VOLUME in
@@ -19,4 +17,23 @@ if [ "$SENDER" = "volume_change" ]; then
   esac
 
   sketchybar --set $NAME icon="$ICON"
-fi
+}
+
+bt_audio() {
+  source "$HOME/.config/sketchybar/icons.sh"
+  DEVICE="$(SwitchAudioSource -t output -c)"
+  echo $DEVICE
+
+  if [[ $DEVICE == .*AirPods.* ]]; then
+    sketchybar --set $NAME icon="$AIRPODS"
+  else
+    echo "Not AirPods"
+  fi
+}
+
+case "$SENDER" in
+  "volume_change") volume_change
+  ;;
+  "bt_audio") bt_audio
+  ;;
+esac
