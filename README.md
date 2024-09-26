@@ -1,53 +1,52 @@
 # Dotfiles
 
-This repo contains my dot files. I use `stow` to easily setup my dot files on any machine.
+This repo contains my dot files. I use `homebrew` to install all my dependencies and I use `stow` to easily setup my dot files on any machine.
 
 ## Setup
-On a new machine I'll have to install some things before I can sync my dot files.
+On a new machine I'll have to install some things before I can sync my dot files. Everything I need is defined in `install.sh`. Executing this should setup 99% od the stuff I need. 
 
-### Install Homebrew
-```zsh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-Make sure to add brew to the PATH buy following the quide at the end of the install process
-
-Xocde Tools should be downloaded as a part of the Homebrew install. git will be installed along with the Xcode Tools, we can use this for cloning the repo. The Homebrew version will be installed later.
----
-
-### Install packages
-Now that we have installed git, we can clone the dot files repo to our machine. As I'm still missing my `.gitconfig` file, I'll have to clone it using https. It's imortant that it's cloned to the home folder `~/` for `stow` to work correctly.
-
+Firstly, I need to clone my repo to the home folder (and rename it):
 ```zsh
 git clone https://github.com/chrede88/dotfiles.git .dotfiles
 ```
 
-Now we can install the rest of the packages needed. Execute the install.sh script to install the packages needed.
+It's important to clone it to the `$HOME` folder, as `stow` is setup to reference this path.
+
+After cloning the repo the only step needed is to make `install.sh` executable:
 
 ```zsh
-chmod +x install.sh
+chmod +x ~/.dotfiles/install.sh
+```
+
+And install all my stuff:
+
+```zsh
 ./install.sh
 ```
 
+There are a few steps needed to finish the setup of some programs after running `stow`. These are listed in the last section.
+
 ---
 
-### Stow
+### Sync dotfiles
 We can now create symlinks to the dot files using `stow`.
 
-First let's test that everything will work out as expected by passed `-n` to stow.
+First let's test that everything will work out as expected by passed `-n` to the sync.sh script.
 
 ```zsh
-stow -vRn .
+./sync.sh -n
 ```
 This will run a simulation and output the symlinks that will be created when running it for real. If everything looks good, we can execute the actual stow command: 
 
-
 ```zsh
-stow -vR .
+./sync.sh
 ```
 
 The output should print the created symlinks.
 
 ---
+
+## Extra Setup
 
 ### Kitty
 Let's open the downloaded terminal emulator.
