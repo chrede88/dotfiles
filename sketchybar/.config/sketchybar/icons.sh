@@ -47,3 +47,7 @@ VOLUME_66=􀊧
 VOLUME_33=􀊥
 VOLUME_10=􀊡
 VOLUME_0=􀊣
+
+# Wifi Icons
+WIFI=􀙇
+NO_WIFI=􀙈

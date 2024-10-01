@@ -9,6 +9,7 @@ github_bell=(
   icon.color=$BLUE
   label=$LOADING
   label.highlight_color=$BLUE
+  padding.left=0
   popup.align=right
   script="$PLUGIN_DIR/github.sh"
   click_script="$POPUP_CLICK_SCRIPT"

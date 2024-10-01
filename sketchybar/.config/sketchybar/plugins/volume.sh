@@ -4,6 +4,7 @@ volume_change() {
   source "$HOME/.config/sketchybar/icons.sh"
   VOLUME=$INFO
 
+  LABEL=$VOLUME"%"
   case $VOLUME in
     [6-9][0-9]|100) ICON=$VOLUME_100
     ;;
@@ -16,7 +17,7 @@ volume_change() {
     *) ICON=$VOLUME_0
   esac
 
-  sketchybar --set $NAME icon="$ICON"
+  sketchybar --set $NAME icon="$ICON" label="$LABEL"
 }
 
 bt_audio() {

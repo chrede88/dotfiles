@@ -12,6 +12,7 @@ done
 
 if [ "$DRYRUN" = true ]; then
   stow -vRn bat
+  stoe -vRn borders
   stow -vRn gh
   stow -vRn git
   stow -vRn gitconfig
@@ -27,6 +28,7 @@ if [ "$DRYRUN" = true ]; then
   stow -vRn zsh-highlight
 else
   stow -vR bat
+  stow -vR borders
   stow -vR gh
   stow -vR git
   stow -vR gitconfig
