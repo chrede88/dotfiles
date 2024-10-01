@@ -5,9 +5,11 @@ zen_on() {
              --set '/cpu.*/' drawing=off \
              --set separator drawing=off \
              --set front_app drawing=off \
+             --set yabai drawing=off \
              --set volume drawing=off \
              --set brew drawing=off \
-             --set battery drawing=off
+             --set battery drawing=off \
+             --set wifi drawing=off
 }
 
 zen_off() {
@@ -15,9 +17,11 @@ zen_off() {
              --set '/cpu.*/' drawing=on \
              --set separator drawing=on \
              --set front_app drawing=on \
+             --set yabai drawing=on \
              --set volume drawing=on \
              --set brew drawing=on \
-             --set battery drawing=off
+             --set battery drawing=on \
+             --set wifi drawing=on
 }
 
 if [ "$1" = "on" ]; then
