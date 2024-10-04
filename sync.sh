@@ -17,6 +17,7 @@ if [ "$DRYRUN" = true ]; then
   stow -vRn git
   stow -vRn gitconfig
   stow -vRn kitty
+  stow -nRn kubecolor
   stow -vRn macchina
   stow -vRn micro
   stow -vRn sketchybar
@@ -33,6 +34,7 @@ else
   stow -vR git
   stow -vR gitconfig
   stow -vR kitty
+  stow -vR kubecolor
   stow -vR macchina
   stow -vR micro
   stow -vR sketchybar

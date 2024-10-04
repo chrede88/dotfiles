@@ -33,6 +33,11 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # Setup kubectl autocompletion
 source <(kubectl completion zsh)
 
+# Setup kubecolor
+alias k=kubecolor
+compdef kubecolor=kubectl
+export KUBECOLOR_CONFIG="$HOME/.config/kubecolor/color.yaml"
+
 # Set bat theme
 export BAT_THEME="Catppuccin Mocha"
 
@@ -49,7 +54,6 @@ source <(fzf --zsh)
 export "MICRO_TRUECOLOR=1"
 
 # Alias commands
-alias k="kubectl"
 alias cat="bat --color=always --paging never --style='changes,numbers,grid,header'"
 alias ls="eza --color=always --git --no-filesize --icons=always --no-time --oneline"
 alias fp="fzf --preview 'bat --color=always --style='changes,numbers,grid,header' {}' | xargs code"
