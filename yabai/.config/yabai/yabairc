@@ -31,7 +31,7 @@ yabai -m config mouse_action2 resize
 yabai -m mouse_drop_action swap
 
 # don't tile these
-yabai -m rule --add app="^(Calculator|Software Update|Dictionary|VLC|System Preferences|System Settings|zoom.us|Archive Utility|Python|App Store|Alfred|Activity Monitor|Proton VPN|Finder|1Password)$" manage=off
+yabai -m rule --add app="^(Calculator|Software Update|Dictionary|VLC|System Preferences|System Settings|zoom.us|Archive Utility|Python|App Store|Alfred|Activity Monitor|Proton VPN|Finder|1Password|Transmission)$" manage=off
 
 # add space for sketchybar
 yabai -m config external_bar all:40:0
