@@ -25,6 +25,7 @@ if [ "$DRYRUN" = true ]; then
   stow -vRn starship
   stow -vRn yabai
   stow -vRn yazi
+  stow -vRn zed
   stow -vRn zsh
   stow -vRn zsh-highlight
 else
@@ -42,6 +43,7 @@ else
   stow -vR starship
   stow -vR yabai
   stow -vR yazi
+  stow -vR zed
   stow -vR zsh
   stow -vR zsh-highlight
 fi
