@@ -3,7 +3,7 @@
 source "$HOME/.config/sketchybar/colors.sh"
 
 COUNT_BREW=$(brew outdated | wc -l | tr -d ' ')
-COUNT_CASK=$(brew --cask --greedy | wc -l | tr -d ' ')
+COUNT_CASK=$(brew outdated --cask --greedy | wc -l | tr -d ' ')
 COUNT_TOTAL=$(($COUNT_BREW+$COUNT_CASK))
 
 COLOR=$RED

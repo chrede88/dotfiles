@@ -17,7 +17,7 @@ volume_change() {
     *) ICON=$VOLUME_0
   esac
 
-  sketchybar --set $NAME icon="$ICON" label="$LABEL"
+  sketchybar --set $NAME icon=$ICON label=$LABEL
 }
 
 bt_audio() {

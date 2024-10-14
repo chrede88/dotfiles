@@ -9,7 +9,6 @@ github_bell=(
   icon.color=$BLUE
   label=$LOADING
   label.highlight_color=$BLUE
-  padding.left=0
   popup.align=right
   script="$PLUGIN_DIR/github.sh"
   click_script="$POPUP_CLICK_SCRIPT"
@@ -26,9 +25,5 @@ github_template=(
 
 sketchybar --add item github.bell right                 \
            --set github.bell "${github_bell[@]}"        \
-           --subscribe github.bell  mouse.entered       \
-                                    mouse.exited        \
-                                    mouse.exited.global \
-                                                        \
            --add item github.template popup.github.bell \
            --set github.template "${github_template[@]}"

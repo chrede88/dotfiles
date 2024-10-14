@@ -81,10 +81,6 @@ popup() {
 case "$SENDER" in
   "routine"|"forced") update
   ;;
-  "mouse.entered") popup on
-  ;;
-  "mouse.exited"|"mouse.exited.global") popup off
-  ;;
   "mouse.clicked") popup toggle
   ;;
 esac
