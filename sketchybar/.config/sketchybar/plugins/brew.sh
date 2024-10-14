@@ -2,11 +2,14 @@
 
 source "$HOME/.config/sketchybar/colors.sh"
 
-COUNT=$(brew outdated | wc -l | tr -d ' ')
+COUNT_BREW=$(brew outdated | wc -l | tr -d ' ')
+COUNT_CASK=$(brew --cask --greedy | wc -l | tr -d ' ')
+COUNT_TOTAL=$(($COUNT_BREW+$COUNT_CASK))
 
 COLOR=$RED
+LABEL=$COUNT_BREW/$BREW_CASK
 
-case "$COUNT" in
+case "$COUNT_TOTAL" in
   [3-5][0-9]) COLOR=$MAROON
   ;;
   [1-2][0-9]) COLOR=$PEACH
@@ -14,8 +17,8 @@ case "$COUNT" in
   [1-9]) COLOR=$YELLOW
   ;;
   0) COLOR=$GREEN
-     COUNT=􀆅
+     LABEL=􀆅
   ;;
 esac
 
-sketchybar --set $NAME label=$COUNT icon.color=$COLOR
+sketchybar --set $NAME label=$LABEL icon.color=$COLOR

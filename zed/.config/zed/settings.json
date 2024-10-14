@@ -13,6 +13,7 @@
   "ensure_final_newline_on_save": false,
   "auto_update": false,
   "show_inline_completions": false,
+  "soft_wrap": "editor_width",
   "telemetry": {
     "metrics": false,
     "diagnostics": false
