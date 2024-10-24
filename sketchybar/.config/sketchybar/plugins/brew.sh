@@ -7,7 +7,7 @@ COUNT_CASK=$(brew outdated --cask --greedy | wc -l | tr -d ' ')
 COUNT_TOTAL=$(($COUNT_BREW+$COUNT_CASK))
 
 COLOR=$RED
-LABEL=$COUNT_BREW/$BREW_CASK
+LABEL=$COUNT_BREW/$COUNT_CASK
 
 case "$COUNT_TOTAL" in
   [3-5][0-9]) COLOR=$MAROON

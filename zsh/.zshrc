@@ -57,6 +57,3 @@ export "MICRO_TRUECOLOR=1"
 alias cat="bat --color=always --paging never --style='changes,numbers,grid,header'"
 alias ls="eza --color=always --git --no-filesize --icons=always --no-time --oneline"
 alias fp="fzf --preview 'bat --color=always --style='changes,numbers,grid,header' {}' | xargs code"
-
-# run macchina on startup
-macchina
