@@ -37,13 +37,13 @@ echo "Installing brew packages ..."
 brew install bat
 brew install eza
 brew install fzf
+brew install fastfetch
 brew install starship
 brew install zoxide
 brew install jq
 brew install yq
 brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
-brew install macchina
 brew install yazi
 brew install gh
 brew install stow

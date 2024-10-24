@@ -12,12 +12,13 @@ done
 
 if [ "$DRYRUN" = true ]; then
   stow -vRn bat
-  stoe -vRn borders
+  stow -vRn borders
+  stow -vRn fastfetch
   stow -vRn gh
   stow -vRn git
   stow -vRn gitconfig
   stow -vRn kitty
-  stow -nRn kubecolor
+  stow -vRn kubecolor
   stow -vRn micro
   stow -vRn sketchybar
   stow -vRn skhd
@@ -30,6 +31,7 @@ if [ "$DRYRUN" = true ]; then
 else
   stow -vR bat
   stow -vR borders
+  stow -vR fastfetch
   stow -vR gh
   stow -vR git
   stow -vR gitconfig
