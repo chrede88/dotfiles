@@ -80,5 +80,10 @@
   },
   "features": {
     "inline_completion_provider": "none"
+  },
+  "languages": {
+    "HTML": {
+      "format_on_save": "off"
+    }
   }
 }
