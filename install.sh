@@ -52,6 +52,7 @@ brew install pipx
 brew install pre-commit
 brew install sketchybar
 brew install borders
+brew install cmatrix
 
 # Next let's install the package needed for kubernetes
 brew install age
