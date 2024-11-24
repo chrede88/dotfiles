@@ -74,6 +74,12 @@ brew install node
 echo "Installing extra stuff for Sketchybar ..."
 curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.24/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf
 
-
 # Start brew services
 brew services start sketchybar
+
+# Set macOS settings
+echo "Changing macOS defaults..."
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.Finder AppleShowAllFiles -bool true
+defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
