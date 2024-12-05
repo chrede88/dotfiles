@@ -1,4 +1,7 @@
 case $@ in
+"Zen Browser")
+  icon_result=":zen_browser:"
+  ;;
 "Zed")
   icon_result=":zed:"
   ;;

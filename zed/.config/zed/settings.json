@@ -84,6 +84,21 @@
   "languages": {
     "HTML": {
       "format_on_save": "off"
+    },
+    "YAML": {
+      "formatter": "language_server"
+    }
+  },
+  "lsp": {
+    "yaml-language-server": {
+      "settings": {
+        "yaml": {
+          "format": {
+            "enable": true,
+            "singleQuote": true
+          }
+        }
+      }
     }
   }
 }
