@@ -15,6 +15,7 @@ if [ "$DRYRUN" = true ]; then
   stow -vRn borders
   stow -vRn fastfetch
   stow -vRn gh
+  stow -vRn ghostty
   stow -vRn git
   stow -vRn gitconfig
   stow -vRn kitty
@@ -33,6 +34,7 @@ else
   stow -vR borders
   stow -vR fastfetch
   stow -vR gh
+  stow -vR ghostty
   stow -vR git
   stow -vR gitconfig
   stow -vR kitty

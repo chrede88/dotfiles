@@ -30,6 +30,7 @@ brew install --cask kitty
 brew install --cask visual-studio-code
 brew install --cask miniconda
 brew install --cask zed
+brew install --cask ghostty
 
 echo "Installing brew packages ..."
 # We can now install the package I need
