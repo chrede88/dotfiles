@@ -1,0 +1,18 @@
+theme = catppuccin-mocha
+
+font-family = Hack Nerd Font Mono Regular
+font-family-bold = Hack Nerd Font Mono Bold
+font-family-italic = Hack Nerd Font Mono Italic
+font-family-bold-italic = Hack Nerd Font Mono Bold Italic
+
+# 11pt @ 2px/pt
+font-size = 11
+
+macos-titlebar-style = hidden
+
+macos-option-as-alt = true
+
+keybind = cmd+shift+enter=new_split:right
+keybind = cmd+shift+d=new_split:down
+keybind = cmd+shift+right_bracket=goto_split:next
+keybind = cmd+shift+left_bracket=goto_split:previous
