@@ -12,6 +12,7 @@ done
 
 if [ "$DRYRUN" = true ]; then
   stow -vRn bat
+  stow -vRn btop
   stow -vRn borders
   stow -vRn fastfetch
   stow -vRn gh
@@ -31,6 +32,7 @@ if [ "$DRYRUN" = true ]; then
   stow -vRn zsh-highlight
 else
   stow -vR bat
+  stow -vR btop
   stow -vR borders
   stow -vR fastfetch
   stow -vR gh

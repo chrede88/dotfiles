@@ -36,6 +36,7 @@ echo "Installing brew packages ..."
 # We can now install the package I need
 # First let's get the package needed for my terminal setup
 brew install bat
+brew install btop
 brew install eza
 brew install fzf
 brew install fastfetch
