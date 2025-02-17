@@ -66,7 +66,7 @@ function y() {
 		builtin cd -- "$cwd"
 	fi
 	rm -f -- "$tmp"
-} 
+}
 
 # run fastfetch at startup
 fastfetch

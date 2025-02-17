@@ -383,6 +383,9 @@ case $@ in
 "Sequel Ace")
   icon_result=":sequel_ace:"
   ;;
+"ProtonVPN" | "Proton VPN")
+  icon_result=":proton_vpn:"
+  ;;
 *)
   icon_result=":default:"
   ;;
