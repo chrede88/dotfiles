@@ -8,12 +8,16 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "base_keymap": "VSCode",
+  "buffer_font_family": "IBM Plex Mono",
   "ui_font_size": 12,
   "buffer_font_size": 12,
   "ensure_final_newline_on_save": false,
   "auto_update": false,
   "show_inline_completions": false,
   "soft_wrap": "editor_width",
+  "terminal": {
+    "font_family": "IBM Plex Mono"
+  },
   "telemetry": {
     "metrics": false,
     "diagnostics": false

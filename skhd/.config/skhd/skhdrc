@@ -24,6 +24,8 @@ shift + alt - 1 : yabai -m window --space 1 --focus; sketchybar --trigger window
 shift + alt - 2 : yabai -m window --space 2 --focus; sketchybar --trigger windows_on_spaces
 shift + alt - 3 : yabai -m window --space 3 --focus; sketchybar --trigger windows_on_spaces
 shift + alt - 4 : yabai -m window --space 4 --focus; sketchybar --trigger windows_on_spaces
+shift + alt - 5 : yabai -m window --space 5 --focus; sketchybar --trigger windows_on_spaces
+shift + alt - 6 : yabai -m window --space 6 --focus; sketchybar --trigger windows_on_spaces
 shift + alt - p : yabai -m window --space prev --focus; sketchybar --trigger windows_on_spaces
 shift + alt - n : yabai -m window --space next --focus; sketchybar --trigger windows_on_spaces
 
