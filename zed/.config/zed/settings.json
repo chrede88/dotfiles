@@ -13,7 +13,7 @@
   "buffer_font_size": 12,
   "ensure_final_newline_on_save": false,
   "auto_update": false,
-  "show_inline_completions": false,
+  "show_edit_predictions": false,
   "soft_wrap": "editor_width",
   "terminal": {
     "font_family": "IBM Plex Mono"
@@ -33,7 +33,7 @@
     "git_diff": true,
     "search_results": true,
     "selected_symbol": true,
-    "diagnostics": true
+    "diagnostics": "all"
   },
   "project_panel": {
     "button": true,
@@ -77,13 +77,13 @@
     "button": false
   },
   "chat_panel": {
-    "button": false
+    "button": "never"
   },
   "notification_panel": {
     "button": false
   },
   "features": {
-    "inline_completion_provider": "none"
+    "edit_prediction_provider": "none"
   },
   "languages": {
     "HTML": {

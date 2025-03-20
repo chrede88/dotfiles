@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# FRONT_APP_SCRIPT='sketchybar --set $NAME label="$INFO"'
-
 yabai=(
   script="$PLUGIN_DIR/yabai.sh"
   icon.font="$FONT:Bold:16.0"

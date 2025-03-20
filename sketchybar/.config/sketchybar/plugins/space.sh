@@ -7,7 +7,6 @@ update() {
   fi
 
   sketchybar --animate tanh 20 --set $NAME icon.highlight=$SELECTED label.width=$WIDTH
-  sketchybar --trigger windows_on_spaces
 }
 
 mouse_clicked() {
