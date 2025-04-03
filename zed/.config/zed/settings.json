@@ -100,6 +100,9 @@
           "format": {
             "enable": true,
             "singleQuote": true
+          },
+          "schemaStore": {
+            "enable": false
           }
         }
       }
