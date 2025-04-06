@@ -25,6 +25,7 @@ brew tap FelixKratz/formulae
 
 echo "Installing brew casks ..."
 brew install --cask font-hack-nerd-font
+brew install --cask font-sketchybar-app-font
 brew install --cask sf-symbols
 brew install --cask kitty
 brew install --cask visual-studio-code
@@ -71,10 +72,6 @@ brew install kubecolor
 brew install go
 brew install hugo
 brew install node
-
-# Setup stuff for sketchybar
-echo "Installing extra stuff for Sketchybar ..."
-curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.24/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf
 
 # Start brew services
 brew services start sketchybar
