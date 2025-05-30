@@ -64,7 +64,7 @@
       "enabled": true
     }
   },
-  "assistant": {
+  "agent": {
     "enabled": false,
     "version": "2"
   },
@@ -91,9 +91,19 @@
     },
     "YAML": {
       "formatter": "language_server"
+    },
+    "Nix": {
+      "language_servers": ["nixd", "!nil"]
     }
   },
   "lsp": {
+    "nixd": {
+      "settings": {
+        "diagnostic": {
+          "suppress": ["sema-extra-with"]
+        }
+      }
+    },
     "yaml-language-server": {
       "settings": {
         "yaml": {
