@@ -80,6 +80,16 @@ brew services start sketchybar
 # Set macOS settings
 echo "Changing macOS defaults..."
 defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide-time-modifier -float 0.001
+defaults write com.apple.dock springboard-show-duration -float 0.001
+defaults write com.apple.dock springboard-hide-duration -float 0.001
+defaults write com.apple.dock springboard-page-duration -float 0.001
+defaults write com.apple.dock mineffect -string scale
+killall Dock
+
 defaults write com.apple.Finder AppleShowAllFiles -bool true
+defaults write com.apple.finder DisableAllAnimations -bool true
+killall Finder
+
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 defaults write com.apple.Safari IncludeDevelopMenu -bool true

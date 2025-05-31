@@ -1,5 +1,6 @@
 .gitignore
 .git
 install.sh
+sync.sh
 README.md
 .DS_Store
