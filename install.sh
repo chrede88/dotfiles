@@ -57,6 +57,8 @@ brew install pre-commit
 brew install sketchybar
 brew install borders
 brew install cmatrix
+brew install yabai
+brew install jackielii/tap/skhd-zig
 
 # Next let's install the package needed for kubernetes
 brew install age
@@ -77,6 +79,10 @@ brew install node
 # Start brew services
 brew services start sketchybar
 
+# Start other services
+yabai --start-service
+skhd --start-service
+
 # Set macOS settings
 echo "Changing macOS defaults..."
 defaults write com.apple.dock autohide -bool true
@@ -87,7 +93,7 @@ defaults write com.apple.dock springboard-page-duration -float 0.001
 defaults write com.apple.dock mineffect -string scale
 killall Dock
 
-defaults write com.apple.Finder AppleShowAllFiles -bool true
+defaults write com.apple.finder AppleShowAllFiles -bool true
 defaults write com.apple.finder DisableAllAnimations -bool true
 killall Finder
 
