@@ -3,6 +3,7 @@
 echo "Setting up Mac ..."
 
 # create .config folder
+echo "create .config folder"
 mkdir -p "$HOME/.config"
 
 echo "Installing Homebrew ..."
@@ -77,9 +78,11 @@ brew install hugo
 brew install node
 
 # Start brew services
+echo "Start sketchybar service"
 brew services start sketchybar
 
 # Start other services
+echo "Start yabai and skhd services"
 yabai --start-service
 skhd --start-service
 
@@ -99,3 +102,11 @@ killall Finder
 
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
+
+# Post setup comments
+echo "Disable System Integrity Protection for yabai:"
+echo "Link for instructions: https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection"
+echo "Check current setup: csrutil status"
+echo ""
+echo "Configure Scripting addition (yabai):"
+echo "Link for instructions: https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)#configure-scripting-addition"
