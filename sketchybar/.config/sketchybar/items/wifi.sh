@@ -3,7 +3,7 @@
 wifi=(
   script="$PLUGIN_DIR/wifi.sh"
   padding_left=10
-  padding_right=5
+  padding_right=0
   icon.color=$LAVENDER
   icon.font="$FONT:Regular:14.0"
   label.drawing=on
