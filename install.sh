@@ -21,14 +21,9 @@ fi
 brew update
 brew analytics off
 
-echo "Installing brew Taps ..."
-brew tap FelixKratz/formulae
-
 echo "Installing brew casks ..."
 brew install --cask font-hack-nerd-font
-brew install --cask font-sketchybar-app-font
 brew install --cask sf-symbols
-brew install --cask kitty
 brew install --cask visual-studio-code
 brew install --cask miniconda
 brew install --cask zed
@@ -55,11 +50,7 @@ brew install stow
 brew install git
 brew install pipx
 brew install pre-commit
-brew install sketchybar
-brew install borders
 brew install cmatrix
-brew install yabai
-brew install jackielii/tap/skhd-zig
 
 # Next let's install the package needed for kubernetes
 brew install age
@@ -77,15 +68,6 @@ brew install go
 brew install hugo
 brew install node
 
-# Start brew services
-echo "Start sketchybar service"
-brew services start sketchybar
-
-# Start other services
-echo "Start yabai and skhd services"
-yabai --start-service
-skhd --start-service
-
 # Set macOS settings
 echo "Changing macOS defaults..."
 defaults write com.apple.dock autohide -bool true
@@ -102,11 +84,3 @@ killall Finder
 
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
-
-# Post setup comments
-echo "Disable System Integrity Protection for yabai:"
-echo "Link for instructions: https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection"
-echo "Check current setup: csrutil status"
-echo ""
-echo "Configure Scripting addition (yabai):"
-echo "Link for instructions: https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)#configure-scripting-addition"

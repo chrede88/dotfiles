@@ -13,19 +13,14 @@ done
 if [ "$DRYRUN" = true ]; then
   stow -vRn bat
   stow -vRn btop
-  stow -vRn borders
   stow -vRn fastfetch
   stow -vRn gh
   stow -vRn ghostty
   stow -vRn git
   stow -vRn gitconfig
-  stow -vRn kitty
   stow -vRn kubecolor
   stow -vRn micro
-  stow -vRn sketchybar
-  stow -vRn skhd
   stow -vRn starship
-  stow -vRn yabai
   stow -vRn yazi
   stow -vRn zed
   stow -vRn zsh
@@ -33,19 +28,14 @@ if [ "$DRYRUN" = true ]; then
 else
   stow -vR bat
   stow -vR btop
-  stow -vR borders
   stow -vR fastfetch
   stow -vR gh
   stow -vR ghostty
   stow -vR git
   stow -vR gitconfig
-  stow -vR kitty
   stow -vR kubecolor
   stow -vR micro
-  stow -vR sketchybar
-  stow -vR skhd
   stow -vR starship
-  stow -vR yabai
   stow -vR yazi
   stow -vR zed
   stow -vR zsh

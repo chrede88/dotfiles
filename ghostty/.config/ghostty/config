@@ -8,8 +8,8 @@ font-family-bold-italic = Hack Nerd Font Mono Bold Italic
 # 11pt @ 2px/pt
 font-size = 11
 
-macos-titlebar-style = hidden
-window-theme = ghostty
+macos-titlebar-style = transparent
+window-theme = dark
 
 macos-option-as-alt = true
 
