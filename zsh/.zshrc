@@ -58,7 +58,10 @@ alias cat="bat --color=always --paging never --style='changes,numbers,grid,heade
 alias ls="eza --color=always --git --no-filesize --icons=always --no-time --oneline"
 alias fp="fzf --preview 'bat --color=always --style='changes,numbers,grid,header' {}' | xargs code"
 
-# Setuo yazi to change the cwd on exit
+# alias some github commonds
+alias ghpr="gh search prs --review-requested=@me --state=open"
+
+# Setup yazi to change the cwd on exit
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
