@@ -18,6 +18,7 @@ if [ "$DRYRUN" = true ]; then
   stow -vRn ghostty
   stow -vRn git
   stow -vRn gitconfig
+  stow -vRn hammerspoon
   stow -vRn kubecolor
   stow -vRn micro
   stow -vRn starship
@@ -33,6 +34,7 @@ else
   stow -vR ghostty
   stow -vR git
   stow -vR gitconfig
+  stow -vR hammerspoon
   stow -vR kubecolor
   stow -vR micro
   stow -vR starship

@@ -28,6 +28,7 @@ brew install --cask visual-studio-code
 brew install --cask miniconda
 brew install --cask zed
 brew install --cask ghostty
+brew install --cask hammerspoon
 
 echo "Installing brew packages ..."
 # We can now install the package I need
