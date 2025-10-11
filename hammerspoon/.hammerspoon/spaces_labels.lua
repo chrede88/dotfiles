@@ -6,21 +6,23 @@ local LOCALE = "auto" -- Language: "auto", "en", "ru", "de", "fr", "es", "pt", "
 
 local JSON_PATH = os.getenv("HOME") .. "/.hammerspoon/spaces-labels.json"
 
-local MENUBAR_TITLE_FORMAT = ' %s '           -- menubar title format (%s is replaced with label)
+local MENUBAR_TITLE_FORMAT = '%s'               -- menubar title format (%s is replaced with label)
 local HOTKEY_LABEL_EDIT = { "cmd", "alt", "L" } -- hotkey for label editing
 
-local BANNER_DURATION = 1.2                   -- banner display duration in seconds
-local SHOW_ON_MONITOR_CHANGE = false          -- show banner on monitor change
+local SHOW_BANNER = false
 
-local BANNER_TEXT_SIZE = 46                   -- banner font size
-local BANNER_Y_POSITION = 0.04                -- Y position (fraction of screen height)
-local BANNER_MIN_WIDTH = 80                   -- minimum banner width in pixels
-local BANNER_PADDING_H = 40                   -- horizontal padding inside banner in pixels
-local BANNER_PADDING_V = 16                   -- vertical padding inside banner in pixels
+local BANNER_DURATION = 1.0          -- banner display duration in seconds
+local SHOW_ON_MONITOR_CHANGE = false -- show banner on monitor change
 
-local DEBOUNCE_DELAY = 0.05                   -- debouncing delay to prevent excessive updates
+local BANNER_TEXT_SIZE = 30          -- banner font size
+local BANNER_Y_POSITION = 0.04       -- Y position (fraction of screen height)
+local BANNER_MIN_WIDTH = 80          -- minimum banner width in pixels
+local BANNER_PADDING_H = 40          -- horizontal padding inside banner in pixels
+local BANNER_PADDING_V = 16          -- vertical padding inside banner in pixels
 
-local DEBUG_MODE = false                      -- print debug information
+local DEBOUNCE_DELAY = 0.05          -- debouncing delay to prevent excessive updates
+
+local DEBUG_MODE = false             -- print debug information
 
 -- ============================================================================
 -- LOCALIZATION
@@ -356,32 +358,37 @@ local function createCanvas(text)
 end
 
 local function showBanner(text)
-    if not text or text == "" then
-        log("Banner not shown: empty text")
-        return
-    end
-
-    createCanvas(text)
-    if not canvas then
-        log("Banner not shown: canvas not created")
-        return
-    end
-
-    canvas[2].text = text
-    canvas:show()
-    log("Banner shown: " .. text)
-
-    if hideTimer then
-        hideTimer:stop()
-        hideTimer = nil
-    end
-
-    hideTimer = hs.timer.doAfter(BANNER_DURATION, function()
-        if canvas then
-            canvas:hide()
-            log("Banner hidden")
+    if SHOW_BANNER then
+        if not text or text == "" then
+            log("Banner not shown: empty text")
+            return
         end
-    end)
+
+        createCanvas(text)
+        if not canvas then
+            log("Banner not shown: canvas not created")
+            return
+        end
+
+        canvas[2].text = text
+        canvas:show()
+        log("Banner shown: " .. text)
+
+        if hideTimer then
+            hideTimer:stop()
+            hideTimer = nil
+        end
+
+        hideTimer = hs.timer.doAfter(BANNER_DURATION, function()
+            if canvas then
+                canvas:hide()
+                log("Banner hidden")
+            end
+        end)
+    else
+        log("Banner not shown: turned off")
+        return
+    end
 end
 
 -- ============================================================================
