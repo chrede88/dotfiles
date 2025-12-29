@@ -108,8 +108,8 @@
       "settings": {
         "yaml": {
           "format": {
-            "enable": true,
-            "singleQuote": true
+            "enable": false,
+            "singleQuote": false
           },
           "schemaStore": {
             "enable": false

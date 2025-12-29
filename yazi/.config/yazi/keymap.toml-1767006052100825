@@ -1,4 +1,4 @@
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = [ "<Right>" ]
-run = "plugin bypass smart_enter"
+run = "plugin bypass --args=smart_enter"
 desc = "Open a file, or recursively enter child directory, skipping children with only a single subdirectory"
