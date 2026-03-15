@@ -29,6 +29,10 @@ brew install --cask miniconda
 brew install --cask zed
 brew install --cask ghostty
 brew install --cask hammerspoon
+brew install --cask 1password
+brew install --cask 1password-cli
+brew install --cask alfred
+brew install --cask microsoft-teams
 
 echo "Installing brew packages ..."
 # We can now install the package I need
@@ -52,6 +56,7 @@ brew install git
 brew install pipx
 brew install pre-commit
 brew install cmatrix
+brew install mactex
 
 # Next let's install the package needed for kubernetes
 brew install age
@@ -69,8 +74,24 @@ brew install go
 brew install hugo
 brew install node
 
+# Install mas so we can install AppStore Apps
+brew install mas
+
+# Mac App Store Apps
+echo "Installing Mac App Store Apps..."
+mas install 1451685025 #Wireguard
+mas install 1569813296 #1p for Safari
+
+
 # Set macOS settings
 echo "Changing macOS defaults..."
+
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+defaults write NSGlobalDomain AppleHighlightColor -string "0.79608 0.65098 0.96863"
+defaults write NSGlobalDomain AppleAccentColor -int 6
+defaults write com.apple.screencapture location -string "$HOME/Downloads"
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-time-modifier -float 0.001
 defaults write com.apple.dock springboard-show-duration -float 0.001
@@ -80,8 +101,18 @@ defaults write com.apple.dock mineffect -string scale
 killall Dock
 
 defaults write com.apple.finder AppleShowAllFiles -bool true
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 defaults write com.apple.finder DisableAllAnimations -bool true
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 killall Finder
 
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
+
+# All done!
+echo "---"
+echo "All done! Enjoy:)\n"

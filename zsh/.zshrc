@@ -59,7 +59,7 @@ alias ls="eza --color=always --git --no-filesize --icons=always --no-time --onel
 alias fp="fzf --preview 'bat --color=always --style='changes,numbers,grid,header' {}' | xargs code"
 
 # alias some github commonds
-alias ghpr="gh search prs --review-requested=@me --state=open"
+alias ghpr="gh search prs --owner=chrede88 --state=open"
 
 # Setup yazi to change the cwd on exit
 function y() {
