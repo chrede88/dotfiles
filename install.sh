@@ -92,6 +92,7 @@ brew install mas
 echo "Installing Mac App Store Apps..."
 mas install 1451685025 #Wireguard
 mas install 1569813296 #1p for Safari
+mas install 6752347588 #Spool buddy
 
 
 # Set macOS settings
