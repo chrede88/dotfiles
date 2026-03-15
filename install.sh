@@ -27,12 +27,24 @@ brew install --cask sf-symbols
 brew install --cask visual-studio-code
 brew install --cask miniconda
 brew install --cask zed
+brew install --cask visual-studio-code
 brew install --cask ghostty
 brew install --cask hammerspoon
 brew install --cask 1password
 brew install --cask 1password-cli
 brew install --cask alfred
 brew install --cask microsoft-teams
+brew install --cask signal
+brew install --cask iina
+brew install --cask proton-drive
+brew install --cask proton-mail-bridge
+brew install --cask protonvpn
+brew install --cask slack
+brew install --cask vlc
+brew install --cask mactex
+brew install --cask transmission
+brew install --cask prusaslicer
+brew install --cask autodesk-fusion
 
 echo "Installing brew packages ..."
 # We can now install the package I need
@@ -56,7 +68,6 @@ brew install git
 brew install pipx
 brew install pre-commit
 brew install cmatrix
-brew install mactex
 
 # Next let's install the package needed for kubernetes
 brew install age
