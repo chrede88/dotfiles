@@ -68,6 +68,7 @@ brew install git
 brew install pipx
 brew install pre-commit
 brew install cmatrix
+brew install micro
 
 # Next let's install the package needed for kubernetes
 brew install age
@@ -100,7 +101,7 @@ echo "Changing macOS defaults..."
 
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write NSGlobalDomain AppleHighlightColor -string "0.79608 0.65098 0.96863"
-defaults write NSGlobalDomain AppleAccentColor -int 6
+defaults write NSGlobalDomain AppleAccentColor -int 5
 defaults write com.apple.screencapture location -string "$HOME/Downloads"
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 
