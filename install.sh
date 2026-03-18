@@ -6,10 +6,12 @@ echo "Setting up Mac ..."
 echo "create .config folder"
 mkdir -p "$HOME/.config"
 
+# Install xCode cli tools
+echo "Installing commandline tools..."
+xcode-select --install
+
 echo "Installing Homebrew ..."
 # Install Homebrew
-# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-# Make sure to add brew to the PATH buy following the quide at the end of the install process
 if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -94,7 +96,6 @@ echo "Installing Mac App Store Apps..."
 mas install 1451685025 #Wireguard
 mas install 1569813296 #1p for Safari
 mas install 6752347588 #Spool buddy
-
 
 # Set macOS settings
 echo "Changing macOS defaults..."
@@ -190,6 +191,10 @@ killall Finder
 killall SystemUIServer
 killall Safari
 killall Music
+
+# clone dotfiles repo
+echo "Cloning dotfiles ..."
+git clone https://github.com/chrede88/dotfiles.git .dotfiles
 
 # All done!
 echo "---"
