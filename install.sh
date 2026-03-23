@@ -82,6 +82,7 @@ brew install kubernetes-cli
 brew install sops
 brew install talosctl
 brew install kubecolor
+brew install kubectl-cnpg
 
 # Next let's install package needed for Hugo
 brew install go
