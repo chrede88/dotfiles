@@ -82,7 +82,6 @@ brew install kubernetes-cli
 brew install sops
 brew install talosctl
 brew install kubecolor
-brew install kubectl-cnpg
 
 # Next let's install package needed for Hugo
 brew install go
@@ -91,6 +90,11 @@ brew install node
 
 # Install mas so we can install AppStore Apps
 brew install mas
+
+# Install krew plug-ins
+echo "Installing krew plug-ins..."
+kubectl krew install rook-ceph
+kubectl krew install cnpg
 
 # Mac App Store Apps
 echo "Installing Mac App Store Apps..."
@@ -200,3 +204,5 @@ git clone https://github.com/chrede88/dotfiles.git .dotfiles
 # All done!
 echo "---"
 echo "All done! Enjoy:)\n"
+echo "Next sync dotfiles using stow\n"
+echo "Use ./sync.sh -n to test"
