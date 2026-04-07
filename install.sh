@@ -71,6 +71,7 @@ brew install pipx
 brew install pre-commit
 brew install cmatrix
 brew install micro
+brew install mole
 
 # Next let's install the package needed for kubernetes
 brew install age
