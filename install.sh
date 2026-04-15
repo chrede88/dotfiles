@@ -121,6 +121,8 @@ defaults write com.apple.screencapture show-thumbnail -bool false
 defaults write com.apple.screencapture type -string png
 # trun off window opening animations
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+# turn on "reduce motion"
+defaults write com.apple.universalaccess reduceMotion -bool true
 # prefer to save files locally
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 # set sidebar icons size in Finder
