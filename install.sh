@@ -12,7 +12,7 @@ xcode-select --install
 
 echo "Installing Homebrew ..."
 # Install Homebrew
-if test ! $(which brew); then
+if ! command -v brew &> /dev/null; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
@@ -47,6 +47,7 @@ brew install --cask mactex
 brew install --cask transmission
 brew install --cask prusaslicer
 brew install --cask autodesk-fusion
+brew install --cask discord
 
 echo "Installing brew packages ..."
 # We can now install the package I need

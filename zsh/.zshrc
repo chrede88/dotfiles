@@ -16,6 +16,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Set XDG_CONFIG_HOME
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # Init Starship
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init zsh)"
