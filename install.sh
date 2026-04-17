@@ -48,6 +48,7 @@ brew install --cask transmission
 brew install --cask prusaslicer
 brew install --cask autodesk-fusion
 brew install --cask discord
+brew install --cask affinity
 
 echo "Installing brew packages ..."
 # We can now install the package I need
@@ -76,7 +77,7 @@ brew install mole
 
 # Next let's install the package needed for kubernetes
 brew install age
-brew install flux
+brew install fluxcd/tap/flux
 brew install helm
 brew install helmfile
 brew install krew
