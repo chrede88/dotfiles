@@ -74,6 +74,8 @@ brew install pre-commit
 brew install cmatrix
 brew install micro
 brew install mole
+brew install gum
+brew install just
 
 # Next let's install the package needed for kubernetes
 brew install age
@@ -85,6 +87,7 @@ brew install kubernetes-cli
 brew install sops
 brew install talosctl
 brew install kubecolor
+brew install talhelper
 
 # Next let's install package needed for Hugo
 brew install go
@@ -98,6 +101,7 @@ brew install mas
 echo "Installing krew plug-ins..."
 kubectl krew install rook-ceph
 kubectl krew install cnpg
+kubectl krew install view-secret
 
 # Mac App Store Apps
 echo "Installing Mac App Store Apps..."
