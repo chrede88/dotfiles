@@ -74,5 +74,10 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+# setup zsh completion
+fpath=(~/.zsh/completions $fpath)
+autoload -U compinit
+compinit
+
 # run fastfetch at startup
 fastfetch

@@ -185,6 +185,8 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 # hide status bar (bottom of Finder window)
 defaults write com.apple.finder ShowStatusBar -bool false
+# set default open path in finder to home folder
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
 
 # never open downloaded stuff automatically
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
