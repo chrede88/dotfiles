@@ -48,10 +48,6 @@ The output should print the created symlinks.
 
 ## Extra Setup
 
-### Kitty
-Let's open the downloaded terminal emulator.
-Hit `control-shift-f5` to load the configuration if needed.
-
 #### Bat
 We also have to compile a new list of themes for `bat` before it'll pickup our theme.
 

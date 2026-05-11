@@ -23,91 +23,9 @@ fi
 brew update
 brew analytics off
 
-echo "Installing brew casks ..."
-brew install --cask font-hack-nerd-font
-brew install --cask sf-symbols
-brew install --cask visual-studio-code
-brew install --cask miniconda
-brew install --cask zed
-brew install --cask visual-studio-code
-brew install --cask ghostty
-brew install --cask hammerspoon
-brew install --cask 1password
-brew install --cask 1password-cli
-brew install --cask alfred
-brew install --cask microsoft-teams
-brew install --cask signal
-brew install --cask iina
-brew install --cask proton-drive
-brew install --cask proton-mail-bridge
-brew install --cask protonvpn
-brew install --cask slack
-brew install --cask vlc
-brew install --cask mactex
-brew install --cask transmission
-brew install --cask prusaslicer
-brew install --cask autodesk-fusion
-brew install --cask discord
-brew install --cask affinity
-
-echo "Installing brew packages ..."
-# We can now install the package I need
-# First let's get the package needed for my terminal setup
-brew install bat
-brew install btop
-brew install duf
-brew install eza
-brew install fzf
-brew install fastfetch
-brew install starship
-brew install zoxide
-brew install jq
-brew install yq
-brew install zsh-autosuggestions
-brew install zsh-syntax-highlighting
-brew install yazi
-brew install gh
-brew install stow
-brew install git
-brew install pipx
-brew install pre-commit
-brew install cmatrix
-brew install micro
-brew install mole
-brew install gum
-brew install just
-
-# Next let's install the package needed for kubernetes
-brew install age
-brew install fluxcd/tap/flux
-brew install helm
-brew install helmfile
-brew install krew
-brew install kubernetes-cli
-brew install sops
-brew install talosctl
-brew install kubecolor
-brew install talhelper
-
-# Next let's install package needed for Hugo
-brew install go
-brew install hugo
-brew install node
-
-# Install mas so we can install AppStore Apps
-brew install mas
-
-# Install krew plug-ins
-echo "Installing krew plug-ins..."
-kubectl krew install rook-ceph
-kubectl krew install cnpg
-kubectl krew install view-secret
-
-# Mac App Store Apps
-echo "Installing Mac App Store Apps..."
-mas install 1451685025 #Wireguard
-mas install 1569813296 #1p for Safari
-mas install 6752347588 #Spool buddy
+# use brew bundle to install everything in Brewfile
+echo 'Install Apps with Brew...'
+brew bundle install --file=.Brewfile
 
 # Set macOS settings
 echo "Changing macOS defaults..."
