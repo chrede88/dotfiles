@@ -1,4 +1,5 @@
 tap "fluxcd/tap"
+tap "home-operations/tap"
 
 cask "1password"
 cask "1password-cli"
@@ -7,6 +8,7 @@ cask "alfred"
 cask "autodesk-fusion"
 cask "discord"
 cask "font-hack-nerd-font"
+cask "home-operations/tap/flate", trusted: true
 cask "ghostty"
 cask "hammerspoon"
 cask "iina"
@@ -31,6 +33,7 @@ brew "bash"
 brew "bat"
 brew "btop"
 brew "cmatrix"
+brew "cosign"
 brew "duf"
 brew "eza"
 brew "fastfetch"
@@ -65,7 +68,7 @@ brew "yq"
 brew "zoxide"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
-brew "fluxcd/tap/flux"
+brew "fluxcd/tap/flux", trusted: true
 
 mas "1Password for Safari", id: 1569813296
 mas "Keynote", id: 409183694
