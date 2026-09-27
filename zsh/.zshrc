@@ -64,6 +64,9 @@ alias fp="fzf --preview 'bat --color=always --style='changes,numbers,grid,header
 # alias some github commonds
 alias ghpr="gh search prs --owner=chrede88 --state=open"
 
+# alias brew commands
+alias bup="brew update;brew upgrade --greedy"
+
 # Setup yazi to change the cwd on exit
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
